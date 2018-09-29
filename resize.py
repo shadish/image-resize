@@ -49,6 +49,7 @@ else:
 in_dirs = os.listdir(inpath)
 
 for i in in_dirs:
+	print(" *************** processing: %s" % i)
 	srcpath = inpath+i+"/full"
 	dest = outpath+i+"/full"
 	dest_resized = outpath+i+"/"+insize
@@ -56,8 +57,8 @@ for i in in_dirs:
 	if(os.path.exists(dest)):
 		print(i+"/full already exists, skipping.")
 	else:
-		print('copying originals')
-		copystuff(srcpath,dest)
+		print('copying originals: %s' % i)
+		copystuff(inpath+i, outpath+i)
 
 	if(os.path.exists(dest_resized)):
 		print(i+"/"+insize+" already exists, skipping.")
