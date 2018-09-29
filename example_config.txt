@@ -1,0 +1,4 @@
+inpath=/some/path/input
+outpath=/some/path/output
+size=512
+
