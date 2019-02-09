@@ -1,0 +1,3 @@
+require 'psd'
+
+p psd
